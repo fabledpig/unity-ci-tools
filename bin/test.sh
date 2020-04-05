@@ -44,8 +44,6 @@ if echo "${UNITY_VERSION}" | grep "2019" &> /dev/null; then
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
-        -username "$UNITY_USERNAME" \
-        -password "$UNITY_PASSWORD" \
         -nographics \
         -silent-crashes \
         -stackTraceLogType Full \
@@ -58,8 +56,6 @@ else
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
-        -username "$UNITY_USERNAME" \
-        -password "$UNITY_PASSWORD" \
         -nographics \
         -noUpm \
         -silent-crashes \
