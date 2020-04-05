@@ -14,7 +14,7 @@ fi
 
 if [ -z "${UNITY_INSTALLER_VERSION}" ]; then
 
-    UNITY_INSTALLER_VERSION="Unity-2019.3.7f1"
+    UNITY_INSTALLER_VERSION="2019.3.7f1"
 
 fi
 
