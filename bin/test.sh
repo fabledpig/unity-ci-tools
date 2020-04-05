@@ -30,12 +30,19 @@ findunity
 
 UNITY_VERSION=$(defaults read "${UNITY_APPLICATION}/Contents/Info.plist" CFBundleVersion)
 
+echo "Creating License file"
+
+mkdir -p "/Library/Application Support/Unity/"
+echo ${!LICENSE} > "/Library/Application Support/Unity/Unity_lic.ulf"
+
 echo "Testing with Unity ${UNITY_VERSION}"
 
 if echo "${UNITY_VERSION}" | grep "2019" &> /dev/null; then
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
+        -username "${UNITY_USERNAME}" \
+        -password "${UNITY_PASSWORD}" \
         -nographics \
         -silent-crashes \
         -stackTraceLogType Full \
@@ -48,6 +55,8 @@ else
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
+        -username "${UNITY_USERNAME}" \
+        -password "${UNITY_PASSWORD}" \
         -nographics \
         -noUpm \
         -silent-crashes \
