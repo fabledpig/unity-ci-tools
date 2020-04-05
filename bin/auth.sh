@@ -39,5 +39,7 @@ echo "$LICENSE" | tr -d '\r' > "/Library/Application Support/Unity/Unity_lic.ulf
 "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
     -quit \
     -batchmode \
+    -createManualActivationFile
     -username "$UNITY_USERNAME" \
-    -password "$UNITY_PASSWORD"
+    -password "$UNITY_PASSWORD" \
+    -logfile /dev/stdout || true
