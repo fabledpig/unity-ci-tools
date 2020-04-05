@@ -40,6 +40,7 @@ echo "$LICENSE" | tr -d '\r' > "/Library/Application Support/Unity/Unity_lic.ulf
     -quit \
     -batchmode \
     -createManualActivationFile
+    -nographics
     -username "$UNITY_USERNAME" \
     -password "$UNITY_PASSWORD" \
     -logfile /dev/stdout || true
