@@ -31,6 +31,6 @@ findunity
 "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
     -quit \
     -batchmode \
-    -serial "${UNITY_SERIAL}" \
+    -nographics \
     -username "${UNITY_USERNAME}" \
     -password "${UNITY_PASSWORD}" || true
