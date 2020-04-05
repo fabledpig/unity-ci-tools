@@ -26,6 +26,8 @@ findunity() {
 
 }
 
+cd TicTacToe
+
 findunity
 
 UNITY_VERSION=$(defaults read "${UNITY_APPLICATION}/Contents/Info.plist" CFBundleVersion)
