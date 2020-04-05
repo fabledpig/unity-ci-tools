@@ -3,6 +3,8 @@
 # https://github.com/tmux/tmux/issues/475#issuecomment-231527324
 export EVENT_NOKQUEUE=1
 
+cd TicTacToe
+
 findunity() {
 
     local UNITY_INSTALLS
@@ -31,5 +33,5 @@ findunity
 "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
     -quit \
     -batchmode \
-    -username "${UNITY_USERNAME}" \
-    -password "${UNITY_PASSWORD}"
+    -username "$UNITY_USERNAME" \
+    -password "$UNITY_PASSWORD"
