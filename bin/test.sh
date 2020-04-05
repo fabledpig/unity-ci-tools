@@ -33,6 +33,7 @@ UNITY_VERSION=$(defaults read "${UNITY_APPLICATION}/Contents/Info.plist" CFBundl
 echo "Creating License file"
 
 mkdir -p "/Library/Application Support/Unity/"
+echo ${!LICENSE}
 echo ${!LICENSE} > "/Library/Application Support/Unity/Unity_lic.ulf"
 
 echo "Testing with Unity ${UNITY_VERSION}"
