@@ -40,7 +40,7 @@ if echo "${UNITY_VERSION}" | grep "2019" &> /dev/null; then
         -silent-crashes \
         -stackTraceLogType Full \
         -logFile - \
-        -projectPath "$(pwd)/" \
+        -projectPath "$(pwd)/TicTacToe" \
         -runEditorTests \
         -editorTestsResultFile "$(pwd)/test.xml"
 
@@ -52,7 +52,7 @@ else
         -noUpm \
         -silent-crashes \
         -logFile "$(pwd)/unity.log" \
-        -projectPath "$(pwd)/" \
+        -projectPath "$(pwd)/TicTacToe" \
         -runEditorTests \
         -editorTestsResultFile "$(pwd)/test.xml"
 
