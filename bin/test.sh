@@ -26,6 +26,8 @@ findunity() {
 
 }
 
+cd TicTacToe
+
 findunity
 
 UNITY_VERSION=$(defaults read "${UNITY_APPLICATION}/Contents/Info.plist" CFBundleVersion)
@@ -42,13 +44,13 @@ if echo "${UNITY_VERSION}" | grep "2019" &> /dev/null; then
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
-        -username "${UNITY_USERNAME}" \
-        -password "${UNITY_PASSWORD}" \
+        -username "$UNITY_USERNAME" \
+        -password "$UNITY_PASSWORD" \
         -nographics \
         -silent-crashes \
         -stackTraceLogType Full \
         -logFile - \
-        -projectPath "$(pwd)/TicTacToe" \
+        -projectPath "$(pwd)" \
         -runEditorTests \
         -editorTestsResultFile "$(pwd)/test.xml"
 
@@ -56,13 +58,13 @@ else
 
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
-        -username "${UNITY_USERNAME}" \
-        -password "${UNITY_PASSWORD}" \
+        -username "$UNITY_USERNAME" \
+        -password "$UNITY_PASSWORD" \
         -nographics \
         -noUpm \
         -silent-crashes \
         -logFile "$(pwd)/unity.log" \
-        -projectPath "$(pwd)/TicTacToe" \
+        -projectPath "$(pwd)" \
         -runEditorTests \
         -editorTestsResultFile "$(pwd)/test.xml"
 
