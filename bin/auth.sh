@@ -28,9 +28,10 @@ findunity() {
 
 findunity
 
+echo ${LICENSE} > "/Library/Application Support/Unity/Unity_lic.ulf"
+
 "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
     -quit \
     -batchmode \
-    -nographics \
     -username "${UNITY_USERNAME}" \
     -password "${UNITY_PASSWORD}" || true
