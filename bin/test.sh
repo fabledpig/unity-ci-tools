@@ -34,7 +34,7 @@ echo "Creating License file"
 
 mkdir -p "/Library/Application Support/Unity/"
 echo ${LICENSE}
-echo ${LICENSE} > "/Library/Application Support/Unity/Unity_lic.ulf"
+echo ${LICENSE} | tr -d '\r' > "/Library/Application Support/Unity/Unity_lic.ulf"
 
 echo "Testing with Unity ${UNITY_VERSION}"
 
