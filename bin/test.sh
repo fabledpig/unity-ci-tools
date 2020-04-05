@@ -39,6 +39,7 @@ if echo "${UNITY_VERSION}" | grep "2019" &> /dev/null; then
     "${UNITY_APPLICATION}/Contents/MacOS/Unity" \
         -batchmode \
         -nographics \
+        -manualLicenseFile "Unity_lic.ulf" \
         -username "$UNITY_USERNAME" \
         -password "$UNITY_PASSWORD" \
         -silent-crashes \
